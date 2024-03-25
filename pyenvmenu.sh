@@ -1,4 +1,24 @@
 #!/bin/bash
+if [ "$(id -u)" -eq 0 ]; then
+    echo "This script can no not be run with sudo."
+    exit 1
+fi
+if [ -f $HOME/.pyenv ]
+then
+echo ""
+else
+if ! dpkg -l | grep libbz2-dev
+then
+echo "packages are not installed"
+echo "Please install with"
+echo "sudo apt-get update && sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev -y"
+exit 1
+else
+curl https://pyenv.run | bash
+clear
+fi
+fi
+
 if ! cat ~/.bashrc | grep PYENV | head -1
 then echo 'export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -16,40 +36,45 @@ fi
 ################# Configs ############################
 # Set to python 3.8.0
 python380(){
+    source ~/.bashrc
     pyenv install 3.8.0
-    pyenv global 3.8.0
+    pyenv shell 3.8.0
     pyenv rehash
     python3 --version
     exit 0
 }
 # Set to python 3.9.0
 python390(){
+    source ~/.bashrc
     pyenv install 3.9.0
-    pyenv global 3.9.0
+    pyenv shell 3.9.0
     pyenv rehash
     python3 --version
     exit 0
 }
 # Set to python 3.10.0
 python3100(){
+    source ~/.bashrc
     pyenv install 3.10.0
-    pyenv global 3.10.0
+    pyenv shell 3.10.0
     pyenv rehash
     python3 --version
     exit 0
 }
 # Set to python 3.11.0
 python3110(){
+    source ~/.bashrc
     pyenv install 3.11.0
-    pyenv global 3.11.0
+    pyenv shell 3.11.0
     pyenv rehash
     python3 --version
     exit 0
 }
 # Set to python 3.12.0
 python3120(){
+    source ~/.bashrc
     pyenv install 3.12.0
-    pyenv global 3.12.0
+    pyenv shell 3.12.0
     pyenv rehash
     python3 --version
     exit 0
