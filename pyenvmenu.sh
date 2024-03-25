@@ -82,8 +82,8 @@ listing(){
 ############################### Menu ###############################
 MENU_FN(){
 clear
-    echo "${INTRO_TEXT}           Python Selection tool                 ${END}"
-    echo "${INTRO_TEXT}           Created by Pierre Gode                ${END}"
+    echo "${INTRO_TEXT}        Python Selection tool                 ${END}"
+    echo "${INTRO_TEXT}        Created by Pierre Gode                ${END}"
 	echo "${INTRO_TEXT} Current running version is $(python3 --version)  ${END}"
     echo "${NORMAL}                                                     ${END}"
     echo "${MENU}*${NUMBER} 1)${MENU} Set to python 3.8.0     ${END}"
