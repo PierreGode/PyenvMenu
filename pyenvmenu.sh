@@ -29,7 +29,6 @@ if ! pyenv versions | grep -q "3.8.0"; then
 fi
 pyenv global 3.8.0
 pyenv rehash
-source $HOME/.bashrc
 python3 --version
 exit 0
 }
@@ -40,7 +39,6 @@ if ! pyenv versions | grep -q "3.9.0"; then
 fi
 pyenv global 3.9.0
 pyenv rehash
-source $HOME/.bashrc
 python3 --version
 exit 0
 }
@@ -51,7 +49,6 @@ if ! pyenv versions | grep -q "3.10.0"; then
 fi
 pyenv global 3.10.0
 pyenv rehash
-source $HOME/.bashrc
 python3 --version
 exit 0
 }
@@ -62,7 +59,6 @@ if ! pyenv versions | grep -q "3.11.0"; then
 fi
 pyenv global 3.11.0
 pyenv rehash
-source $HOME/.bashrc
 python3 --version
 exit 0
 }
@@ -73,7 +69,6 @@ if ! pyenv versions | grep -q "3.12.0"; then
 fi
 pyenv global 3.12.0
 pyenv rehash
-source $HOME/.bashrc
 python3 --version
 exit 0
 }
