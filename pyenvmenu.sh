@@ -3,7 +3,7 @@ if [ "$(id -u)" -eq 0 ]; then
     echo "This script can no not be run with sudo."
     exit 1
 fi
-if [ -f $HOME/.pyenv ]
+if [ -f "$HOME/.pyenv" ]
 then
 echo ""
 else
