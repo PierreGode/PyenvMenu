@@ -72,6 +72,18 @@ pyenv rehash
 python3 --version
 exit 0
 }
+# set specific python vesrion
+pythonspec(){
+echo "Write vesrsion you want to use"
+read -r PYVERSION
+if ! pyenv versions | grep -q "$PYVERSION"; then
+    pyenv install $PYVERSION
+    pyenv rehash
+    python3 --version
+fi
+exit 0
+}
+
 # List availible versions
 listing(){
     pyenv install --list
@@ -91,7 +103,8 @@ clear
     echo "${MENU}*${NUMBER} 3)${MENU} Set to python 3.10.0    ${END}"
 	echo "${MENU}*${NUMBER} 4)${MENU} Set to python 3.11.0    ${END}"
     echo "${MENU}*${NUMBER} 5)${MENU} Set to python 3.12.0    ${END}"
-	echo "${MENU}*${NUMBER} 6)${MENU} List availible versions ${END}"
+    echo "${MENU}*${NUMBER} 6)${MENU} Set specific python version  ${END}"
+	echo "${MENU}*${NUMBER} 7)${MENU} List availible versions ${END}"
     echo "${NORMAL}                                                   ${END}"
     echo "${ENTER_LINE}Please enter a menu option and enter or ${RED_TEXT}ctrl + c to exit. ${END}"
 	read -r opt
@@ -123,6 +136,10 @@ while [ "$opt" != '' ]
 	    python3120
             ;;
 	6) clear;
+	    echo "Switching to spcified python version"
+	    pythonspec
+            ;;
+	7) clear;
 	    echo "Listing availible versions"
 	    listing
 	       ;;
