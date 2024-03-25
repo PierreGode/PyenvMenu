@@ -1,3 +1,4 @@
+#!/bin/bash
 if ! cat $HOME/.bashrc | grep PYENV | head -1
 then 
 echo "No config.. applying"
@@ -9,5 +10,5 @@ fi' >> $HOME/.bashrc
 sudo apt-get update && sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev -y
 curl https://pyenv.run | bash
 else
-echo "config there
+echo "config there"
 fi
