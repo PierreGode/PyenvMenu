@@ -7,26 +7,14 @@ if [ -f "$HOME/.pyenv" ]
 then
 echo ""
 else
-if ! dpkg -l | grep libbz2-dev
-then
-echo "packages are not installed"
-echo "Please install with"
-echo "sudo apt-get update && sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev -y"
-exit 1
-else
-curl https://pyenv.run | bash
-clear
-fi
+  if ! dpkg -l | grep libbz2-dev
+  then
+  echo "packages are not installed or config not applyed"
+  echo "Please install with= sudo sh config.sh" 
+  exit 1
+  fi
 fi
 
-if ! cat $HOME/.bashrc | grep PYENV | head -1
-then echo 'export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-' >> $HOME/.bashrc
-fi
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
