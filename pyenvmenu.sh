@@ -36,7 +36,7 @@ exit 0
 # Set to python 3.9.0
 python390(){
 if ! pyenv versions | grep -q "3.9.0"; then
-    pyenv install 3.11.0
+    pyenv install 3.9.0
 fi
 pyenv global 3.9.0
 pyenv rehash
@@ -69,7 +69,7 @@ exit 0
 # Set to python 3.12.0
 python3120(){
 if ! pyenv versions | grep -q "3.12.0"; then
-    pyenv install 3.11.0
+    pyenv install 3.12.0
 fi
 pyenv global 3.12.0
 pyenv rehash
