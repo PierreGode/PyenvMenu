@@ -92,6 +92,12 @@ listing(){
     exit 0
 }
 
+# List installed versions
+installedvers(){
+pyenv versions
+exit 0
+}
+
 
 ############################### Menu ###############################
 MENU_FN(){
@@ -103,10 +109,11 @@ clear
     echo "${MENU}*${NUMBER} 1)${MENU} Set to python 3.8.0     ${END}"
     echo "${MENU}*${NUMBER} 2)${MENU} Set to python 3.9.0     ${END}"
     echo "${MENU}*${NUMBER} 3)${MENU} Set to python 3.10.0    ${END}"
-	echo "${MENU}*${NUMBER} 4)${MENU} Set to python 3.11.0    ${END}"
+    echo "${MENU}*${NUMBER} 4)${MENU} Set to python 3.11.0    ${END}"
     echo "${MENU}*${NUMBER} 5)${MENU} Set to python 3.12.0    ${END}"
     echo "${MENU}*${NUMBER} 6)${MENU} Set specific python version  ${END}"
-	echo "${MENU}*${NUMBER} 7)${MENU} List availible versions ${END}"
+    echo "${MENU}*${NUMBER} 7)${MENU} List availible versions ${END}"
+    echo "${MENU}*${NUMBER} 8)${MENU} List installed versions ${END}"
     echo "${NORMAL}                                                   ${END}"
     echo "${ENTER_LINE}Please enter a menu option and enter or ${RED_TEXT}ctrl + c to exit. ${END}"
 	read -r opt
@@ -144,6 +151,10 @@ while [ "$opt" != '' ]
 	7) clear;
 	    echo "Listing availible versions"
 	    listing
+	       ;;
+	8) clear;
+	    echo "Listing installed versions"
+	    installedvers
 	       ;;
         x)exit;
         ;;
