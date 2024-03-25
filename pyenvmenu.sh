@@ -83,26 +83,26 @@ while [ "$opt" != '' ]
             exit;
     else
         case $opt in
-    1) clear;
-        echo "Switching to python 3.8.0";
-         python380
-             ;;
+         1) clear;
+             echo "Switching to python 3.8.0";
+              python380
+              ;;
 
 	2) clear;
 	    echo "Switching to python 3.9.0"
-	     python380
+	     python390
              ;;
 	3) clear;
 	     echo "Switching to python 3.10.0"
-	     python380
+	     python3100
              ;;
 	4) clear;
 	    echo "Switching to python 3.11.0"
-	    python380
+	    python3110
             ;;
 	5) clear;
 	    echo "Switching to python 3.12.0"
-	    python380
+	    python3120
             ;;
 	6) clear;
 	    echo "Listing availible versions"
