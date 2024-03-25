@@ -39,7 +39,7 @@ python380(){
 if ! pyenv versions | grep -q "3.8.0"; then
     pyenv install 3.8.0
 fi
-pyenv shell 3.8.0
+pyenv global 3.8.0
 pyenv rehash
 source ~/.bashrc
 python3 --version
@@ -50,7 +50,7 @@ python390(){
 if ! pyenv versions | grep -q "3.9.0"; then
     pyenv install 3.11.0
 fi
-pyenv shell 3.9.0
+pyenv global 3.9.0
 pyenv rehash
 source ~/.bashrc
 python3 --version
@@ -61,7 +61,7 @@ python3100(){
 if ! pyenv versions | grep -q "3.10.0"; then
     pyenv install 3.10.0
 fi
-pyenv shell 3.10.0
+pyenv global 3.10.0
 pyenv rehash
 source ~/.bashrc
 python3 --version
@@ -72,7 +72,7 @@ python3110(){
 if ! pyenv versions | grep -q "3.11.0"; then
     pyenv install 3.11.0
 fi
-pyenv shell 3.11.0
+pyenv global 3.11.0
 pyenv rehash
 source ~/.bashrc
 python3 --version
@@ -83,7 +83,7 @@ python3120(){
 if ! pyenv versions | grep -q "3.12.0"; then
     pyenv install 3.11.0
 fi
-pyenv shell 3.12.0
+pyenv global 3.12.0
 pyenv rehash
 source ~/.bashrc
 python3 --version
