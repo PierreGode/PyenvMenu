@@ -79,6 +79,7 @@ read -r "PYVERSION"
 echo "Setting $PYVERSION "
 if ! pyenv versions | grep -q "$PYVERSION"; then
     pyenv install $PYVERSION
+    pyenv global $PYVERSION
     pyenv rehash
     python3 --version
 fi
