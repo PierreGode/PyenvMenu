@@ -36,48 +36,58 @@ fi
 ################# Configs ############################
 # Set to python 3.8.0
 python380(){
-    source ~/.bashrc
+if ! pyenv versions | grep -q "3.8.0"; then
     pyenv install 3.8.0
-    pyenv shell 3.8.0
-    pyenv rehash
-    python3 --version
-    exit 0
+fi
+pyenv shell 3.8.0
+pyenv rehash
+source ~/.bashrc
+python3 --version
+exit 0
 }
 # Set to python 3.9.0
 python390(){
-    pyenv install 3.9.0
-    pyenv shell 3.9.0
-    pyenv rehash
-    source ~/.bashrc
-    python3 --version
-    exit 0
+if ! pyenv versions | grep -q "3.9.0"; then
+    pyenv install 3.11.0
+fi
+pyenv shell 3.9.0
+pyenv rehash
+source ~/.bashrc
+python3 --version
+exit 0
 }
 # Set to python 3.10.0
 python3100(){
+if ! pyenv versions | grep -q "3.10.0"; then
     pyenv install 3.10.0
-    pyenv shell 3.10.0
-    pyenv rehash
-    source ~/.bashrc
-    python3 --version
-    exit 0
+fi
+pyenv shell 3.10.0
+pyenv rehash
+source ~/.bashrc
+python3 --version
+exit 0
 }
 # Set to python 3.11.0
 python3110(){
+if ! pyenv versions | grep -q "3.11.0"; then
     pyenv install 3.11.0
-    pyenv shell 3.11.0
-    pyenv rehash
-    source ~/.bashrc
-    python3 --version
-    exit 0
+fi
+pyenv shell 3.11.0
+pyenv rehash
+source ~/.bashrc
+python3 --version
+exit 0
 }
 # Set to python 3.12.0
 python3120(){
-    pyenv install 3.12.0
-    pyenv shell 3.12.0
-    pyenv rehash
-    source ~/.bashrc
-    python3 --version
-    exit 0
+if ! pyenv versions | grep -q "3.12.0"; then
+    pyenv install 3.11.0
+fi
+pyenv shell 3.12.0
+pyenv rehash
+source ~/.bashrc
+python3 --version
+exit 0
 }
 # List availible versions
 listing(){
