@@ -19,13 +19,13 @@ clear
 fi
 fi
 
-if ! cat ~/.bashrc | grep PYENV | head -1
+if ! cat $HOME/.bashrc | grep PYENV | head -1
 then echo 'export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-' >> ~/.bashrc
+' >> $HOME/.bashrc
 fi
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -41,7 +41,7 @@ if ! pyenv versions | grep -q "3.8.0"; then
 fi
 pyenv global 3.8.0
 pyenv rehash
-source ~/.bashrc
+source $HOME/.bashrc
 python3 --version
 exit 0
 }
@@ -52,7 +52,7 @@ if ! pyenv versions | grep -q "3.9.0"; then
 fi
 pyenv global 3.9.0
 pyenv rehash
-source ~/.bashrc
+source $HOME/.bashrc
 python3 --version
 exit 0
 }
@@ -63,7 +63,7 @@ if ! pyenv versions | grep -q "3.10.0"; then
 fi
 pyenv global 3.10.0
 pyenv rehash
-source ~/.bashrc
+source $HOME/.bashrc
 python3 --version
 exit 0
 }
@@ -74,7 +74,7 @@ if ! pyenv versions | grep -q "3.11.0"; then
 fi
 pyenv global 3.11.0
 pyenv rehash
-source ~/.bashrc
+source $HOME/.bashrc
 python3 --version
 exit 0
 }
@@ -85,7 +85,7 @@ if ! pyenv versions | grep -q "3.12.0"; then
 fi
 pyenv global 3.12.0
 pyenv rehash
-source ~/.bashrc
+source $HOME/.bashrc
 python3 --version
 exit 0
 }
