@@ -75,7 +75,8 @@ exit 0
 # set specific python vesrion
 pythonspec(){
 echo "Write vesrsion you want to use"
-read -r PYVERSION
+read -r "PYVERSION"
+echo "Setting $PYVERSION "
 if ! pyenv versions | grep -q "$PYVERSION"; then
     pyenv install $PYVERSION
     pyenv rehash
