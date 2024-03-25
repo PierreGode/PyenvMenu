@@ -1,6 +1,8 @@
 # PyenvMenu
 Script for switching between different python3 versions
 
+To get started run: sh pyenvmenu.sh     and follow instructions
+
 ![image](https://github.com/PierreGode/PyenvMenu/assets/8579922/40f6b62c-56c9-401f-a960-3bfd17abebfc)
 
 
