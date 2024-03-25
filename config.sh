@@ -1,5 +1,5 @@
 #!/bin/bash
-if ! cat $HOME/.bashrc | grep PYENV | head -1
+if ! cat "$HOME/.bashrc" | grep -q "^PYENV"
 then 
 echo "No config.. applying"
 echo 'export PYENV_ROOT="$HOME/.pyenv"
